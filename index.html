@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Buscador Pokemon</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="https://www.pokemon.com/es" class="logo d-flex align-items-center me-auto me-lg-0">
+        <h1 class="sitename">pokemon.com</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="assets/img/fondo.jpg" alt="" data-aos="fade-in">
+
+      <div class="container">
+
+        <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-xl-6 col-lg-8">
+            <h2><span>.</span>Pokemon<span>.</span></h2>
+            <p>Al que madruga Dios lo ayuda, o en este caso, consigue un Pokémon <i>-Profesor Oak</i></p>
+          </div>
+        </div>
+
+        <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-binoculars"></i>
+              <div style="margin-top: 10px;"> <!-- Puedes ajustar el valor del margen según lo necesites -->
+                <input class="form-control mb-2" type="text" id="search" placeholder="Buscar por nombre">
+                <button id="search-button" class="btn btn-warning" onclick="window.location.href='#about'">Buscar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-123"></i>
+              <div style="margin-top: 10px;"> <!-- Puedes ajustar el valor del margen según lo necesites -->
+                <input class="form-control mb-2" type="text" id="search-id" placeholder="Buscar por ID">
+                <button class="btn btn-warning" id="search-id-button" onclick="window.location.href='#about'">Buscar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-fire"></i>
+              <div style="margin-top: 10px;"> <!-- Puedes ajustar el valor del margen según lo necesites -->
+                <select class="form-control mb-2" id="pokemon-type">
+                  <option value="">Seleccionar tipo</option>
+                  <option value="normal">Normal</option>
+                  <option value="fighting">Lucha</option>
+                  <option value="flying">Volador</option>
+                  <option value="poison">Veneno</option>
+                  <option value="ground">Tierra</option>
+                  <option value="rock">Roca</option>
+                  <option value="bug">Bicho</option>
+                  <option value="ghost">Fantasma</option>
+                  <option value="steel">Acero</option>
+                  <option value="fire">Fuego</option>
+                  <option value="water">Agua</option>
+                  <option value="grass">Planta</option>
+                  <option value="electric">Eléctrico</option>
+                  <option value="psychic">Psíquico</option>
+                  <option value="ice">Hielo</option>
+                  <option value="dragon">Dragón</option>
+                  <option value="dark">Siniestro</option>
+                  <option value="fairy">Hada</option>
+              </select>
+              
+                <button class="btn btn-warning" id="search-type-button" onclick="window.location.href='#about'">Buscar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-feather"></i>
+              <div style="margin-top: 10px;"> <!-- Puedes ajustar el valor del margen según lo necesites -->
+                <select class="form-control mb-2" id="pokemon-ability">
+                  <option value="">Seleccionar habilidad</option>
+                  <option value="overgrow">Sobrecrecimiento</option>
+                  <option value="blaze">Mar llamas</option>
+                  <option value="stench">Hedor</option>
+                  <option value="drizzle">Llovizna</option>
+                  <option value="speed-boost">Impulso</option>
+                  <option value="battle-armor">Armadura batalla</option>
+                  <option value="sturdy">Robustez</option>
+                  <option value="damp">Humedad</option>
+                  <option value="limber">Flexibilidad</option>
+                  <option value="sand-veil">Velo arena</option>
+                  <option value="static">Estática</option>
+                  <option value="volt-absorb">Absorber electricidad</option>
+                  <option value="water-absorb">Absorber agua</option>
+                  <option value="oblivious">Despiste</option>
+                  <option value="cloud-nine">Aclimatación</option>
+                  <option value="compound-eyes">Ojo compuesto</option>
+                  <option value="insomnia">Insomnio</option>
+                  <option value="color-change">Cambio color</option>
+                  <option value="immunity">Inmunidad</option>
+                  <option value="flash-fire">Absorbe fuego</option>
+                  <option value="shield-dust">Polvo escudo</option>
+                  <option value="own-tempo">Ritmo propio</option>
+                  <option value="suction-cups">Ventosas</option>
+                  <option value="intimidate">Intimidación</option>
+                  <option value="shadow-tag">Sombratrampa</option>
+                  <option value="rough-skin">Piel tosca</option>
+                  <option value="wonder-guard">Superguarda</option>
+                  <option value="levitate">Levitación</option>
+                  <option value="effect-spore">Efecto espora</option>
+                  <option value="synchronize">Sincronía</option>
+                  <option value="clear-body">Cuerpo puro</option>
+                  <option value="natural-cure">Cura natural</option>
+                  <option value="lightning-rod">Pararrayos</option>
+                  <option value="serene-grace">Dicha</option>
+                  <option value="swift-swim">Nado rápido</option>
+                  <option value="chlorophyll">Clorofila</option>
+                  <option value="illuminate">Iluminación</option>
+                  <option value="trace">Rastro</option>
+                  <option value="huge-power">Potencia</option>
+                  <option value="poison-point">Punto tóxico</option>
+                  <option value="inner-focus">Foco interno</option>
+                  <option value="magma-armor">Cuerpo llama</option>
+                  <option value="water-veil">Velo agua</option>
+                  <option value="magnet-pull">Imán</option>
+                  <option value="soundproof">Insonorizar</option>
+                  <option value="rain-dish">Cobardía</option>
+                  <option value="sand-stream">Chorro arena</option>
+                  <option value="pressure">Presión</option>
+                  <option value="thick-fat">Grasa sólida</option>
+                  <option value="early-bird">Madrugador</option>
+                  <option value="flame-body">Cuerpo llama</option>
+                  <option value="run-away">Fuga</option>
+                  <option value="keen-eye">Vista lince</option>
+                  <option value="hyper-cutter">Corte fuerte</option>
+                  <option value="pickup">Recogida</option>
+                  <option value="truant">Ausente</option>
+                  <option value="hustle">Entusiasmo</option>
+                  <option value="cute-charm">Juego sucio</option>
+                  <option value="plus">Más</option>
+                  <option value="minus">Menos</option>
+                  <option value="forecast">Predicción</option>
+                  <option value="sticky-hold">Adherencia</option>
+                  <option value="shed-skin">Muda</option>
+                  <option value="guts">Agallas</option>
+                  <option value="marvel-scale">Cuerpo mágico</option>
+                  <option value="liquid-ooze">Lodoso</option>
+                  <option value="torrent">Torrente</option>
+                  <option value="swarm">Enjambre</option>
+                  <option value="rock-head">Cabeza roca</option>
+                  <option value="drought">Sequía</option>
+                  <option value="arena-trap">Trampa arena</option>
+                  <option value="vital-spirit">Espíritu vital</option>
+                  <option value="white-smoke">Humo blanco</option>
+                  <option value="pure-power">Energía pura</option>
+                  <option value="shell-armor">Caparazón</option>
+                  <option value="air-lock">Bucle aire</option>
+                  <option value="tangled-feet">Pies firmes</option>
+                  <option value="motor-drive">Electromotor</option>
+                  <option value="rivalry">Rivalidad</option>
+                  <option value="steadfast">Impasible</option>
+                  <option value="snow-cloak">Manto nieve</option>
+                  <option value="gluttony">Gula</option>
+                  <option value="anger-point">Irascible</option>
+                  <option value="unburden">Liviano</option>
+                  <option value="heatproof">Ignífugo</option>
+                  <option value="simple">Simple</option>
+                  <option value="dry-skin">Piel seca</option>
+                  <option value="download">Descarga</option>
+
+                </select>
+                <button class="btn btn-warning" id="search-ability-button" onclick="window.location.href='#about'">Buscar</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-shuffle"></i>
+              <div style="margin-top: 10px;"> <!-- Puedes ajustar el valor del margen según lo necesites -->
+                <button class="btn btn-warning" id="random-button" onclick="window.location.href='#about'">Buscar Aleatorio</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-eraser-fill"></i>
+              <div style="margin-top: 10px;"> <!-- Puedes ajustar el valor del margen según lo necesites -->
+                <button class="btn btn-warning" id="clear-button">Limpiar</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="spinner" style="display: none;">
+            <div class="spinner-border text-warning" role="status">
+              <span class="visually-hidden">Cargando...</span>
+            </div>
+          </div>
+          
+
+          <div id="error-message" style="color: red;"></div>
+
+          
+          
+        </div>
+
+      </div>
+      
+
+    </section><!-- /Hero Section -->
+
+    <!-- Agregar controles de búsqueda por estadísticas -->
+
+
+    <!-- About Section -->
+    <div class="col-xl-12 text-center" data-aos="fade-up" data-aos-delay="100" id="about">
+      <div class="row gy-4 justify-content-center align-items-center">
+          <div id="pokemon"></div>
+      </div>
+    </div>
+    <!-- /About Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logoPokemon.png" alt="Logo de Pokémon">
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Pueblo Paleta, Kanto</p>
+              <p>Mundo Pokémon</p>
+              <p class="mt-3"><strong>Teléfono:</strong> <span>+1 234 567 8901</span></p>
+              <p><strong>Email:</strong> <span>info@pokemon.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Explorar</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Inicio</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Pokédex</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Entrenadores</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Gimnasios</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Liga Pokémon</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Servicios</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Entrenamiento</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Combate</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Crianza</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Cura</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Intercambio</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Boletín</h4>
+            <p>Suscríbete a nuestro boletín y mantente actualizado con las últimas noticias y eventos de Pokémon.</p>
+            <form action="subscribe.php" method="post" class="php-email-form">
+              <input class="form-control mb-2" type="email" name="email" placeholder="Ingresa tu email">
+              <input class="btn btn-warning" type="submit" value="Suscribir">
+            </form>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+    <div class="copyright">
+      <div class="container text-center">
+        <p>© <span>2024</span> <strong class="px-1 sitename">Pokémon</strong> <span>Todos los derechos reservados</span></p>
+        <div class="credits">
+          Diseñado por <a href="https://bootstrapmade.com/">Grupo 2 Web Avanzada</a>
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+  
+  
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/paginacion.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

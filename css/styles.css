@@ -1,0 +1,16 @@
+#spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Ajusta la altura según sea necesario */
+  }
+  
+  .spinner-border {
+    width: 3rem; /* Ajusta el tamaño del spinner */
+    height: 3rem; /* Ajusta el tamaño del spinner */
+    border-width: 0.25em; /* Ajusta el grosor del spinner */
+  }
+
+
+
+  
