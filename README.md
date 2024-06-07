@@ -1,4 +1,4 @@
-#Buscador de Pokémon
+# Buscador de Pokémon
 
 Este proyecto es un buscador de Pokémon que permite a los usuarios buscar Pokémon por nombre, ID, tipo o habilidad utilizando la API pública de PokeAPI. Los usuarios pueden realizar búsquedas y ver información detallada sobre los Pokémon encontrados.
 Características
