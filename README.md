@@ -1,7 +1,7 @@
 # Buscador de Pokémon
 
 Este proyecto es un buscador de Pokémon que permite a los usuarios buscar Pokémon por nombre, ID, tipo o habilidad utilizando la API pública de PokeAPI. Los usuarios pueden realizar búsquedas y ver información detallada sobre los Pokémon encontrados.
-Características
+## Características
 
     Búsqueda de Pokémon por nombre.
     Búsqueda de Pokémon por ID.
@@ -12,21 +12,21 @@ Características
     Manejo de errores en caso de búsquedas fallidas.
     Indicador de carga durante las solicitudes AJAX.
 
-Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
     HTML
     CSS (Bootstrap)
     JavaScript
     AJAX (Fetch API)
 
-Configuración y Uso
+## Configuración y Uso
 
     Clona este repositorio en tu máquina local usando git clone.
     Abre el archivo index.html en tu navegador web.
     Utiliza los diferentes campos de búsqueda para buscar Pokémon por nombre, ID, tipo o habilidad.
     Observa los resultados de la búsqueda y la información detallada de cada Pokémon encontrado.
 
-Contribución
+## Contribución
 
 Si deseas contribuir a este proyecto, puedes hacerlo siguiendo estos pasos:
 
@@ -36,6 +36,6 @@ Si deseas contribuir a este proyecto, puedes hacerlo siguiendo estos pasos:
     Haz push de tus cambios a la rama (git push origin feature/nueva-funcionalidad).
     Abre un Pull Request en GitHub.
 
-Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT.
